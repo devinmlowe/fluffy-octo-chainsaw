@@ -43,8 +43,8 @@
 /* Dark theme colors */
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-color: hsl(204, 14%, 21%); /* Dark background */
-        --text-color: #e0e0e0; /* Text color */
+        --bg-color: hsl(0deg 0% 12.16%); /* Dark background */
+        --text-color: #d2c78d; /* Text color */
         --text-muted: #a0a0a0; /* Muted text */
         --border-color: #404040; /* Border color */
         --code-bg: #2d2d2d; /* Code background */
