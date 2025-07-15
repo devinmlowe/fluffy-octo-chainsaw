@@ -1,14 +1,6 @@
 /* ==========================================================================
-   Markdeep Mobile & Dark Mode Optimized CSS using the Everforest theme
-   as a basis for the color palette.
+   A css style-sheet using the everforest theme for Obsidian.md
    ========================================================================== */
-
-/* CSS Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .theme-light.theme-light {
   --bg-hue: 43;
