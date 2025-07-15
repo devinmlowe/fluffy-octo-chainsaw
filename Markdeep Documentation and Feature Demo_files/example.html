@@ -1,0 +1,28 @@
+
+<!-- saved from url=(0046)https://casual-effects.com/markdeep/example.py -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="color-scheme" content="light dark"></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"># Code example by suquant from
+# https://stackoverflow.com/questions/18262306/quicksort-with-python
+
+
+def partition(array, begin, end):
+    pivot = begin
+    for i in xrange(begin+1, end+1):
+        if array[i] &lt;= array[begin]:
+            pivot += 1
+            array[i], array[pivot] = array[pivot], array[i]
+    array[pivot], array[begin] = array[begin], array[pivot]
+    return pivot
+
+
+
+def quicksort(array, begin=0, end=None):
+    if end is None:
+        end = len(array) - 1
+    def _quicksort(array, begin, end):
+        if begin &gt;= end:
+            return
+        pivot = partition(array, begin, end)
+        _quicksort(array, begin, pivot-1)
+        _quicksort(array, pivot+1, end)
+    return _quicksort(array, begin, end)
+</pre></body></html>
