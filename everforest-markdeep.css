@@ -90,6 +90,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     line-height: 1.25;
+   text-align: left; /*ensure headings are left-aligned */
+   letter-spacing: normal; /* reset letter spacing*/
+   word-spacing: normal; /* reset word spacing */
 }
 
 h1 { font-size: 2.25em; }
