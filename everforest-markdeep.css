@@ -139,7 +139,7 @@ a:focus {
 
 /* Code and Pre-formatted Text */
 code {
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-family: "Hack Nerd Font", "Source Code Pro", monospace;
     font-size: 0.875em;
     background-color: var(--code-bg);
     color: var(--code-color);
@@ -149,7 +149,7 @@ code {
 }
 
 pre {
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-family: "Hack Nerd Font", "Source Code Pro", monospace;
     font-size: 0.875em;
     background-color: var(--pre-bg);
     color: var(--code-color);
