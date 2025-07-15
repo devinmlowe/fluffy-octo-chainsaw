@@ -12,9 +12,9 @@
 /* Root Variables for Theme Management */
 :root {
     /* Light theme colors */
-    --bg-color: hsl(43, 57%, 89%); /* Light background */
-    --text-color: #333333; /* Text color */
-    --text-muted: #666666; /* Muted text */
+    --bg-color: #fdf6e3; /* Light background */
+    --text-color: #5c6a72; /* Text color */
+    --text-muted: #939f91; /* Muted text */
     --border-color: #e0e0e0; /* Border color */
     --code-bg: #f5f5f5; /* Code background */
     --code-color: #333333; /* Code text color */
@@ -67,6 +67,7 @@
 /* Base Typography */
 body {
     font-family: "Hack Nerd Font", "Source Code Pro", monospace;
+    webkit-font-smoothing: auto;
     font-size: var(--base-font-size);
     line-height: var(--line-height);
     color: var(--text-color);
@@ -101,12 +102,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-color);
 }
 
-h1 { font-size: 2.25em; color: var(--text-color); }
-h2 { font-size: 1.875em; color: var(--text-color); }
-h3 { font-size: 1.5em; color: var(--text-color); }
-h4 { font-size: 1.25em; color: var(--text-color); }
-h5 { font-size: 1.125em; color: var(--text-color); }
-h6 { font-size: 1em; color: var(--text-color); }
+h1 { font-size: 2.25em; color: #d37170; }
+h2 { font-size: 1.875em; color: #d77f48; }
+h3 { font-size: 1.5em; color: #bf983d; }
+h4 { font-size: 1.25em; color: #899c40; }
+h5 { font-size: 1.125em; color: #569d79; }
+h6 { font-size: 1em; color: #5a93a2; }
 
 /* Paragraphs and Text */
 p {
