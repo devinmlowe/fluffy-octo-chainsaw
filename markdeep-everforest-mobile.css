@@ -9,6 +9,7 @@
 /* Color Variables */
 :root
 {
+    --fonts-default:         ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; 
     /* 2.1 Dark theme color variables */
     --bg0-dark:       #000000;
     --bg1-dark:       #272f34;
@@ -83,19 +84,18 @@
     --light-dim-aqua:   #6ec398;
     --light-dim-blue:   #6cb3c6;
     --light-dim-purple: #e092be;
+
 }
 
 /* Base Typography */
-body {
-    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+body#md {
+    font-weight: 400;
+    font-size: 16px;
+    font-family:  var(--fonts-default);
+    color: var(--fg-light);
+    background-color: var(--bg-light);
     -webkit-font-smoothing: auto;
-/*    font-size: var(--base-font-size);
-    line-height: var(--line-height);
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    padding: var(--content-padding);
-    max-width: var(--content-max-width);
-    margin: 0 auto;
+    text-align: left;
+    line-height: 170%;
     transition: background-color 0.3s ease, color 0.3s ease;
-*/
-};
+}
