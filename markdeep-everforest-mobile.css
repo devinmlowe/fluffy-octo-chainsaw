@@ -7,6 +7,12 @@
     font-size: medium;
 }
 
+@media screen and (max-width: 100em) {
+    body#md {
+        padding: 4px;
+    }
+}
+
 
 /* Color Variables */
 :root {
