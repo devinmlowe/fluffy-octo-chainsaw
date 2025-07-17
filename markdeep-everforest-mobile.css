@@ -146,7 +146,6 @@
 /* Small mobile screens */
 @media screen and (max-width: 480px) {
     body {
-        padding: 10px;
         font-size: 14px;
     }
     
@@ -160,7 +159,6 @@
     
     pre {
         font-size: 0.7em;
-        padding: 0.5em;
     }
 }
 
