@@ -2,11 +2,7 @@
 
 
 
-@media screen and (max-width: 100em) {
-    body#md {
-        padding: 4px;
-    }
-}
+
 
 
 /* Color Variables */
@@ -135,10 +131,37 @@
 /* CSS Reset and Base Styles */
 * {
     margin: 0;
-    padding: .7em;
+    padding: 0;
     box-sizing: border-box;
     font-family: var(--font-default);
     font-size: medium;
+}
+
+@media screen and (max-width: 150em) {
+    body#md {
+        padding: 4px;
+    }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    h1 { font-size: 1.5em; }
+    h2 { font-size: 1.25em; }
+    h3 { font-size: 1.125em; } 
+    
+    table {
+        font-size: 0.75em;
+    }
+    
+    pre {
+        font-size: 0.7em;
+        padding: 0.5em;
+    }
 }
 
 /* Base Typography */
