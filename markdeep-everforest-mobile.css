@@ -1,13 +1,6 @@
 /* TODO: Adjust Heading line spacing on mobile...the lines are currently overlapping. */
 
-/* CSS Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-}
+
 
 @media screen and (max-width: 100em) {
     body#md {
@@ -18,7 +11,9 @@
 
 /* Color Variables */
 :root {
-    --fonts-default: Arial;
+    --font-default: ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    --font-monospace-default: ui-monospace, SFMono-Regular, "Cascadia Mono", "Roboto Mono", "DejaVu Sans Mono", "Liberation Mono", Menlo, Monaco, "Consolas", "Source Code Pro", monospace;
+
     /* 2.1 Dark theme color variables */
     --bg0-dark: #000000;
     --bg1-dark: #272f34;
@@ -94,32 +89,63 @@
     --light-dim-blue: #6cb3c6;
     --light-dim-purple: #e092be;
 
+    /* Light Theme Settings */
+    --text-color: var(--fg-light);
+    --background-color: var(--bg-light);
+    --background-color2: var(--bg1-light);
+    --link-color: var(--faded-green);
+    --link-color-visited: var(--dim-green);
+    --table-border: var(--bg5-light);
+    --table-header-bg: var(--bg_visual_light);
+    --table-header-color: var(--fg-light);
+    --table-hover-bg: var(--fg-light);
+
+    --h1-color: var(--light-dim-red);
+    --h2-color: var(--light-dim-orange);
+    --h3-color: var(--light-dim-yellow);
+    --h4-color: var(--light-dim-green);
+    --h5-color: var(--light-dim-aqua);
+    --h6-color: var(--light-dim-purple);
+
 }
 
+/* Overrides for Dark Theme */
 @media (prefers-color-scheme: dark) {
     :root {
+        --text-color: var(--fg-dark);
         --background-color: var(--bg-dark);
-        --table-border: var(--bg5-dark);
-        --table-header-bg: var(--grey0-dark);
-        --table-hover-bg: var(--grey1-dark);
+        --background-color2: var(--bg0-dark);
+        --link-color: var(--dim-aqua));
+        --link-color-visited: var(--dim-aqua);
+        --table-border: var(--grey0-light);
+        --table-header-bg: var(--bg-visual);
+        --table-header-color: var(--fg-dark);
+        --table-hover-bg: var(--fg-dark);
+        --table-even-rows-bg: var(--bg-dark);
+        --table-odd-rows-bg: var(--bg0-dark);
+        --h1-color: var(--dim-red);
+        --h2-color: var(--dim-orange);
+        --h3-color: var(--dim-yellow);
+        --h4-color: var(--dim-green);
+        --h5-color: var(--dim-aqua);
+        --h6-color: var(--dim-purple);
     }
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --background-color: var(--bg-light);
-        --table-border: var(--bg5-light);
-        --table-header-bg: var(--grey0-light);
-        --table-hover-bg: var(--grey1-light);
-    }
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-default);
+    font-size: medium;
 }
-
 
 /* Base Typography */
 body#md {
     font-weight: 400;
     font-size: 16px;
-    color: var(--fg-light);
+    color: var(--text-color);
     background-color: var(--background-color);
     -webkit-font-smoothing: auto;
     text-align: left;
@@ -133,12 +159,14 @@ body#md {
     margin: 0 auto;
 }
 
-.longtoc {
+.longtoc {}
 
+.md a:link {
+    color: var(--link-color);
 }
 
-.md a {
-
+.md a:visited {
+    color: var(--link-color-visited)
 }
 
 
@@ -148,6 +176,31 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5em;
     margin-bottom: 0.0em;
     line-height: 1.3em;
+    color: inherit;
+}
+
+.md h1 {
+    color: var(--h1-color);
+}
+
+.md h2 {
+    color: var(--h2-color);
+}
+
+.md h3 {
+    color: var(--h3-color);
+}
+
+.md h4 {
+    color: var(--h4-color);
+}
+
+.md h5 {
+    color: var(--h5-color);
+}
+
+.md h6 {
+    color: var(--h6-color);
 }
 
 p {
@@ -165,25 +218,24 @@ li {
 }
 
 /* Tables */
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 1em 0;
-    font-size: 0.9em;
+.md table.table {
+    box-shadow: 0px 1px 2px var(---light);
+    background-color: var(--table-border);
 }
 
-table th,
-table td {
-    border: 1px solid var(--table-border);
-    padding: 0.75em;
-    text-align: left;
+.md table.table tr:nth-child(even) {
+    background-color: var(--background-color);
 }
 
-table th {
+.md table.table tr:nth-child(odd) {
+    background-color: var(--background-color2);
+}
+
+.md table.table td, .md table.table th {
+    border: 1px solid var(--background-color);
+}
+
+.md table.table th {
+    color: var(--table-header-color);
     background-color: var(--table-header-bg);
-    font-weight: 600;
-}
-
-table tr:hover {
-    background-color: var(--table-hover-bg);
 }
