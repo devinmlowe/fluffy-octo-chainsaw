@@ -1,11 +1,12 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://devinmlowe.github.io/fluffy-octo-chainsaw/markdeep-everforest-mobile.css">
 
-<link rel="stylesheet" href="markdeep-everforest-mobile.css"> 
-
-<!--
-<link rel="stylesheet" href="markdeep-mobile-dark.css">
--->
+    <!-- Include the Mermaid.js library -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+        window.mermaid = mermaid;
+    </script>
 
 **This is the Title**
 
@@ -239,4 +240,11 @@ This concludes the structured markdown example. Summarize the key takeaways and 
 topic.
 
 <!-- Markdeep: -->
-<script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<script src="markdeep.min.js"></script><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?"></script>
+<script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            mermaid.initialize({ startOnLoad: true });
+        });
+    </script>
