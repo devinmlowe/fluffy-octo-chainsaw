@@ -140,6 +140,15 @@
 .md h1:before, .md h2:before, .md h3:before, .md h4:before, .md h5:before, .md h6:before { 
     content: none; 
     }
+    
+.md h1 {
+    position: sticky;
+    top: 0;
+    background-color: var(--background-color); /* Prevents content from showing through */
+    margin: 0;
+    z-index: 100; /* Keeps header above other content */
+    border-bottom: 1px solid #ccc; /* Visual separation */
+} 
 
 .md pre, pre {
     font-size: 90%;
