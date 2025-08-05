@@ -150,6 +150,14 @@
     border-bottom: 1px solid #ccc; /* Visual separation */
 } 
 
+.md h2 {
+    position: sticky;
+    top: 2em;
+    z-index: 100;
+    border-bottom: 1px solid #ccc;
+    background-color: var(--background-color); /* Prevents content from showing through */
+}
+
 .md pre, pre {
     font-size: 90%;
     font-family: var(--font-monospace-default);
@@ -214,7 +222,7 @@ body#md {
 /* Markdeep-specific container     */
 .markdeep {
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0px auto;
 }
 
 .longtoc {}
